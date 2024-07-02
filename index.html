@@ -9,7 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600;800&family=Train+One&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="/css/index.css">
     <title>HNG Profile</title>
 </head>
 
@@ -38,8 +38,9 @@
                         step."</p>
                     </section>
                     <section class="blocky blocky-clock">
-                        <p class="font-display">Sunday</p>
-                        <p>12:34 PM</p>
+                        <p class="font-display text-lg" data-testid="currentDay"></p>
+                        <p class="font-bold font-mono text-lg" data-testid="currentTimeUTC"></p>
+                        <p>UTC</p>
                     </section>
                     <section class="blocky blocky-emoji">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -80,8 +81,14 @@
                             </svg>
                         </p>
                     </section>
-                    <section class="blocky blocky-goals">
-
+                    <section class="blocky blocky-goals text-md">
+                        <h2 class="font-bold">My 2 Year Plan in Tech</h2>
+                        <ul>
+                            <li>Finish two Real-World project tutorials.</li>
+                            <li>Have a portfolio page for my works.</li>
+                            <li>Volunteer my tech skills at a startup.</li>
+                            <li>Become a Senior Level Frontend Developer.</li>
+                        </ul>
                     </section>
                 </div>
             </div>
@@ -89,18 +96,19 @@
         <footer class="footer spacer">
             <ul class="text-sm font-medium">
                 <li class="blocky">
-                    <a href="http://hng.tech/learn" _target="blank" data-testid="hngLink">hng.tech/learn</a>
+                    <a href="http://hng.tech/learn" target="_blank" data-testid="hngLink">hng.tech/learn</a>
                 </li>
                 <li class="blocky">
-                    <a href="http://keyword.dog" _target="blank" data-testid="keywordLink">keyword.dog</a>
+                    <a href="http://keyword.dog" target="_blank" data-testid="keywordLink">keyword.dog</a>
                 </li>
                 <li class="blocky">
-                    <a href="http://scrapeanyweb.site" _target="blank"
+                    <a href="http://scrapeanyweb.site" target="_blank"
                         data-testid="scrapeanywebLink">scrapeanyweb.site</a>
                 </li>
             </ul>
         </footer>
     </div>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
