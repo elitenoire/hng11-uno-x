@@ -1,7 +1,7 @@
-# hng11-uno-x
+# hng12-uno-x
 
-HNG11 FRONTEND INTERNSHIP TASK: STAGE 1
+HNG12 FRONTEND INTERNSHIP TASK: STAGE 1
 
-> Build your personal website using HTML, CSS and JavaScript.
+> Build your Profile Card using HTML, CSS and JavaScript.
 
-A simple single-page website outlining my goals for the next 2 years in the tech field.
+A simple profile card with a bio, location, and a social links.
