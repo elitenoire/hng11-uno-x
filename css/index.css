@@ -1,16 +1,16 @@
 :root {
-    --background: #0C1618;
-    --foreground: #0C1618;
-    --coral: #FF8552;
-    --peach: #FFB899;
-    --cornsilk: #FAF4D3;
-    --jade: #5DC080;
-    --azul: #3385D7;
+    --background: #1C1C1C;
+    --foreground: #1C1C1C;
+    --indigo: #9381FF;
+    --periwinkle: #B8B8FF;
+    --azul: #EBFFFF;
+    --saffron: #F3C969;
+    --verdigris: #08BDBD;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
     --radius-inner: 1.5rem;
     --radius-tiny: 0.25rem;
-    --gap: 0.25rem;
+    --gap: 0.15rem;
 }
 * {
     box-sizing: border-box;
@@ -52,10 +52,10 @@ html,body {
     border-radius: var(--radius-tiny);
 }
 .header-tag {
-    border-radius: 9999px;
+    border-radius: var(--radius-tiny);
     padding: 1.5rem 0.5rem;
     margin-top: 1rem;
-    background: var(--cornsilk);
+    background: var(--azul);
 }
 .grid {
     display: grid;
@@ -71,7 +71,7 @@ html,body {
     word-break: break-word;
 }
 .blocky-intro {
-    background: var(--cornsilk);
+    background: var(--azul);
     padding: 2rem;
     text-align: justify;
 }
@@ -83,15 +83,15 @@ html,body {
     background: transparent;
     color: inherit;
     padding: 0 0.25rem;
-    border: 2px solid var(--coral);
+    border: 2px solid var(--indigo);
     border-radius: var(--radius-tiny);
     transition: background-color 0.35s;
 }
 .blocky-intro:hover .highlight {
-    background: var(--coral);
+    background: var(--indigo);
 }
 .blocky-clock {
-    background: var(--azul);
+    background: var(--verdigris);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -115,8 +115,18 @@ html,body {
     background: rgba(255,255,255,0.35);
 }
 .blocky-clock:hover p:nth-child(2) {
-    color: var(--cornsilk);
+    color: var(--azul);
     opacity: 0.75;
+}
+.blocky-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--saffron);
 }
 .blocky-emoji {
     background: rgba(255, 255, 255, 0.08);
@@ -136,27 +146,27 @@ html,body {
     transition: transform 0.5s ease-in-out;
 }
 .blocky-emoji svg:nth-child(1) {
-    fill: var(--azul);
+    fill: var(--verdigris);
     transition-delay: 0.15s;
 }
 .blocky-emoji:hover svg:nth-child(1) {
     transform: translateX(-15%) rotate(-45deg);
 }
 .blocky-emoji svg:nth-child(2) {
-    fill: var(--coral);
+    fill: var(--indigo);
     transition-delay: 0.25s;
 }
 .blocky-emoji:hover svg:nth-child(2) {
     transform: scale(1.2);
 }
 .blocky-emoji svg:nth-child(3) {
-    fill: var(--jade);
+    fill: var(--saffron);
 }
 .blocky-emoji:hover svg:nth-child(3) {
     transform: translateX(15%) rotate(45deg);
 }
 .blocky-social {
-    background: var(--jade);
+    background: var(--saffron);
     padding: 0.5rem;
     overflow: hidden;
 }
@@ -166,13 +176,14 @@ html,body {
     text-underline-offset: 0.5rem;
 }
 .blocky-social--github {
-    background: var(--cornsilk);
+    background: var(--azul);
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: calc(var(--radius) - 0.5rem);
     padding: 0.5rem 0.5rem 0.5rem 2rem;
     text-decoration: none;
+    color: inherit;
 }
 .blocky-social--github svg {
     flex: 0 1 5rem;
@@ -185,7 +196,7 @@ html,body {
 .blocky-goals {
     --s: 50px; /* control the size*/
     --c1: var(--background);
-    --c2: var(--cornsilk);
+    --c2: var(--azul);
     --c: #0000 75%,var(--c1) 0;
     --g1: conic-gradient(at 75% 25%,var(--c));
     --g2: conic-gradient(at 25% 75%,var(--c));
@@ -193,7 +204,7 @@ html,body {
         var(--g1),var(--g1) var(--s) var(--s),
         var(--g2),var(--g2) var(--s) var(--s) var(--c2);
     background-size: calc(2*var(--s)) calc(2*var(--s));
-    border: 0.5rem solid var(--cornsilk);
+    border: 0.5rem solid var(--azul);
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -204,7 +215,7 @@ html,body {
 .blocky-goals ul {
     padding: 2rem 1rem;
     border-radius: var(--radius-inner);
-    background: var(--cornsilk);
+    background: var(--azul);
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 .blocky-goals ul,
@@ -221,12 +232,12 @@ html,body {
 .blocky-goals ul li {
     padding: 1rem;
     border-radius: calc(var(--radius-inner) - 1rem);
-    background: var(--peach);
+    background: var(--periwinkle);
     transition-property: background-color,transform;
     transition-duration: 0.35s;
 }
 .blocky-goals ul li:hover {
-    background: var(--coral);
+    background: var(--indigo);
     transform: scale(1.01);
 }
 .footer ul {
@@ -249,34 +260,37 @@ html,body {
     transition: background-color 0.35s;
 }
 .footer ul li:nth-child(odd) a {
-    background: var(--coral);
+    background: var(--indigo);
 }
 .footer ul li:nth-child(even) a {
-    background: var(--cornsilk);
-}
-.footer ul li:nth-child(1) a:hover {
     background: var(--azul);
 }
+.footer ul li:nth-child(1) a:hover {
+    background: var(--verdigris);
+}
 .footer ul li:nth-child(2) a:hover {
-    background: var(--peach);
+    background: var(--periwinkle);
 }
 .footer ul li:nth-child(3) a:hover {
-    background: var(--jade);
+    background: var(--saffron);
 }
 
 .spacer {
     margin-top: var(--gap);
 }
 .bg-primary {
-    background: var(--coral);
+    background: var(--indigo);
 }
 .font-display {
-    font-family: "Train One", system-ui;
-    font-weight: 400;
+  font-family: "Kablammo", serif;
+    font-weight: 500;
     font-style: normal;
+    font-variation-settings: "MORF" 55;
+    font-optical-sizing: auto;
+
 }
 .font-sans {
-    font-family: "Montserrat Alternates", sans-serif;
+    font-family: "Space Grotesk", serif;
     font-weight: 500;
     font-style: normal;
 }
@@ -288,7 +302,7 @@ html,body {
     font-weight: 600;
 }
 .font-bold {
-    font-weight: 800;
+    font-weight: 700;
 }
 .text-sm {
     font-size: 1.125rem;     /* 18px */
